@@ -13,7 +13,11 @@ gem "oily_png"
 gem "friendly_id"
 gem "simple_form"
 gem "rufus-scheduler"
+gem "slim"
+
+
 group :assets do
+
   gem "compass", "~> 0.13.alpha.0"
   gem "compass-rails", "~> 1.0.3"
   gem "sass", "~> 3.2.0.alpha.278"

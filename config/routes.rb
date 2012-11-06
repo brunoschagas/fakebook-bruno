@@ -7,6 +7,8 @@ Fakebook::Application.routes.draw do
 
   root to: 'home#index'
   
+  get  'teste/link' => 'teste_link#index'
+  
 
 
   # The priority is based upon order of creation:
