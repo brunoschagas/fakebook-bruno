@@ -5000,3 +5000,5 @@ a:hover {
 .box-content form {
   margin-bottom: 0;
 }
+
+#error_explanation h1{margin-left: 50px;}

@@ -1,7 +1,7 @@
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "erro impediu","erros impediram") %> bla bla bla:</h2>
 
       <ul>
       <% @post.errors.full_messages.each do |msg| %>
@@ -10,16 +10,27 @@
       </ul>
     </div>
   <% end %>
+  
+  
+          <div class="item-image usuario">
+            <span class="item-image-wrap"><img width="50" height="50" src="/assets/user-chuck.jpg" /></span>
+          </div>
+          <div class="comment-textarea">
+            <%= f.text_area :body, placeholder: 'Adicione um comentário...' %>
+          </div>
+          <div class="form-actions">
+            <div class="left">
+              <%= f.file_field :image %>
+              
+            </div>
+            <div class="right">
+               <%= f.submit 'Postar', class: 'button tiny' %>
+            </div>
+          </div>
+       
 
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+
+
+
+  <% end %>

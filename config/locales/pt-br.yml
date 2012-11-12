@@ -207,6 +207,8 @@ pt-BR:
     models:
       user: Usuário
     attributes:
+      post:
+        body: Comentário
       user:
         password: Senha
     errors:

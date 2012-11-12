@@ -1,11 +1,11 @@
 Fakebook::Application.routes.draw do
-  resources :posts
+  resources :posts, except: [:edit, :update]
 
   get 'frontend/:template' => 'frontend#show'
 
   get 'frontend(/index)' => 'frontend#index'
 
-  root to: 'home#index'
+  root to: 'posts#index'
   
   get  'teste/link' => 'teste_link#index'
   
