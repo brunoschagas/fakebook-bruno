@@ -36,6 +36,12 @@
                 </div>
                 <div class="user-comment">
                   <%= simple_format(post.body) %>
+
+                  <% if post.image? %>  
+                    <p><%= image_tag(post.image.regular, width: 375, height: 266)%><p>
+                    <p><%= image_tag(post.image.thumb, width: 100, height: 100)%><p>
+                  <% end %>
+
                 </div>
                 <div class="item-actions">
                   <span class="action-like">
